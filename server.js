@@ -16,7 +16,19 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Security Middleware
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      frameSrc: ["'self'", "https://maps.google.com"],
+      connectSrc: ["'self'"]
+    }
+  }
+}));
 app.use(cors());
 
 // Enable JSON body parsing for API requests
@@ -62,9 +74,9 @@ app.post('/api/apply', applyLimiter, [
   body('type').isString().trim().escape(),
   body('org').isString().trim().escape(),
   body('role').isString().trim().escape(),
-  body('linkedin').optional({ checkFalsy: true }).isURL(),
-  body('github').optional({ checkFalsy: true }).isURL(),
-  body('portfolio').optional({ checkFalsy: true }).isURL(),
+  body('linkedin').optional({ checkFalsy: true }).isURL({ require_tld: false }),
+  body('github').optional({ checkFalsy: true }).isURL({ require_tld: false }),
+  body('portfolio').optional({ checkFalsy: true }).isURL({ require_tld: false }),
   body('interests').isArray(),
   body('interests.*').isString().trim().escape(),
   body('status').isString().trim().escape(),
