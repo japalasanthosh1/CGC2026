@@ -46,9 +46,12 @@ const adminLimiter = rateLimit({
 
 app.use(globalLimiter);
 
-// Initialize Neon SQL driver
-// It requires DATABASE_URL to be set in your .env file
-const sql = neon(process.env.DATABASE_URL);
+// Initialize Neon SQL driver securely
+const sql = process.env.DATABASE_URL ? neon(process.env.DATABASE_URL) : null;
+
+if (!sql) {
+  console.warn("⚠️ WARNING: DATABASE_URL is missing. Database operations will fail.");
+}
 
 // Secure API Endpoint for handling form submissions
 app.post('/api/apply', applyLimiter, [
@@ -182,7 +185,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(__dirname));
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
   console.log(`📡 Securely connected to Neon Database.`);
 });
