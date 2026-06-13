@@ -86,8 +86,6 @@ app.post('/api/apply', [
 });
 
 // --- SECURE ADMIN API ENDPOINTS ---
-app.use('/api/admin', adminLimiter);
-
 const requireAdmin = (req, res, next) => {
   const pin = req.headers['authorization'];
   if (pin !== process.env.ADMIN_PIN) {
