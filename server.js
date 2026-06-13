@@ -3,10 +3,7 @@ import { neon } from '@neondatabase/serverless';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import helmet from 'helmet';
 import cors from 'cors';
-import rateLimit from 'express-rate-limit';
-import hpp from 'hpp';
 import { body, validationResult } from 'express-validator';
 
 // Load environment variables from .env file
@@ -18,48 +15,10 @@ const PORT = process.env.PORT || 3000;
 // Trust the reverse proxy (Railway/Render) so rate limiters don't block everyone
 app.set('trust proxy', 1);
 
-// Security Middleware
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      imgSrc: ["'self'", "data:", "https:"],
-      frameSrc: ["'self'", "https://maps.google.com", "https://www.google.com"],
-      connectSrc: ["'self'"]
-    }
-  }
-}));
 app.use(cors());
 
 // Enable JSON body parsing for API requests
 app.use(express.json());
-
-// Protect against HTTP Parameter Pollution
-app.use(hpp());
-
-// Rate Limiters
-const globalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
-  message: { error: 'Too many requests from this IP, please try again after 15 minutes' }
-});
-
-const applyLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
-  max: 50, // Limit each IP to 50 applications per hour
-  message: { error: 'Application limit reached. Please try again later.' }
-});
-
-const adminLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 20, // Limit each IP to 20 admin requests per 15 mins
-  message: { error: 'Too many admin attempts. Please try again later.' }
-});
-
-app.use(globalLimiter);
 
 // Initialize Neon SQL driver securely
 const sql = process.env.DATABASE_URL ? neon(process.env.DATABASE_URL) : null;
@@ -69,7 +28,7 @@ if (!sql) {
 }
 
 // Secure API Endpoint for handling form submissions
-app.post('/api/apply', applyLimiter, [
+app.post('/api/apply', [
   body('id').isString().trim().escape(),
   body('name').isString().notEmpty().trim().escape(),
   body('email').isEmail().normalizeEmail(),
