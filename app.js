@@ -141,4 +141,20 @@
     });
   }
 
+  /* ─── Hero Navigation Buttons (CSP-safe, no inline handlers) ─── */
+  const heroViewSpeakers = document.getElementById('heroViewSpeakers');
+  const heroViewSchedule = document.getElementById('heroViewSchedule');
+
+  if (heroViewSpeakers) {
+    heroViewSpeakers.addEventListener('click', () => {
+      document.getElementById('speakers').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  if (heroViewSchedule) {
+    heroViewSchedule.addEventListener('click', () => {
+      document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
 })();

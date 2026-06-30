@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Common Ground 2026 Presented by Vested — Technology. Intelligence. Impact.</title>
   <meta name="description"
     content="A flagship technology conference exploring the future of AI, Product, Design, Engineering, and Financial Technology. 18 July 2026 · Microsoft Office, Hyderabad.">
   <meta name="theme-color" content="#061A40">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://*.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
@@ -81,8 +84,7 @@
         </div>
 
         <div class="hero-actions">
-          <button class="btn hero-btn-primary"
-            onclick="document.getElementById('speakers').scrollIntoView({behavior:'smooth'})">
+          <button class="btn hero-btn-primary" id="heroViewSpeakers">
             View Speakers
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
@@ -90,8 +92,7 @@
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </button>
-          <button class="btn hero-btn-ghost"
-            onclick="document.getElementById('schedule').scrollIntoView({behavior:'smooth'})">View Schedule</button>
+          <button class="btn hero-btn-ghost" id="heroViewSchedule">View Schedule</button>
         </div>
       </div>
     </div>
@@ -288,7 +289,7 @@
         <div class="exp-left">
           <div class="exp-list">
             <div class="exp-item active"
-              data-img="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-ai.jpg">
               <div class="exp-item-header">
                 <span class="num">01</span>
                 <h3 class="h2">Artificial Intelligence</h3>
@@ -299,7 +300,7 @@
               </div>
             </div>
             <div class="exp-item"
-              data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-product.jpg">
               <div class="exp-item-header">
                 <span class="num">02</span>
                 <h3 class="h2">Product & Innovation</h3>
@@ -311,7 +312,7 @@
               </div>
             </div>
             <div class="exp-item"
-              data-img="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-design.jpg">
               <div class="exp-item-header">
                 <span class="num">03</span>
                 <h3 class="h2">Design</h3>
@@ -323,7 +324,7 @@
               </div>
             </div>
             <div class="exp-item"
-              data-img="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-engineering.jpg">
               <div class="exp-item-header">
                 <span class="num">04</span>
                 <h3 class="h2">Engineering</h3>
@@ -335,7 +336,7 @@
               </div>
             </div>
             <div class="exp-item"
-              data-img="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-fintech.jpg">
               <div class="exp-item-header">
                 <span class="num">05</span>
                 <h3 class="h2">Financial Technology</h3>
@@ -347,7 +348,7 @@
               </div>
             </div>
             <div class="exp-item"
-              data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800">
+              data-img="./exp-leadership.jpg">
               <div class="exp-item-header">
                 <span class="num">06</span>
                 <h3 class="h2">Leadership & Careers</h3>
@@ -362,7 +363,7 @@
         <div class="exp-right">
           <div class="exp-preview">
             <img id="expPreviewImage"
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
+              src="./exp-ai.jpg"
               alt="Artificial Intelligence">
           </div>
         </div>
