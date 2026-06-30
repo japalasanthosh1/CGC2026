@@ -1,5 +1,2 @@
-node_modules/
-.env
-.neon/
 .agents/
 .DS_Store

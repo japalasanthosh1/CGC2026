@@ -18,27 +18,21 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="#home" class="nav-logo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-        stroke-linejoin="round">
-        <circle cx="9" cy="12" r="6"></circle>
-        <circle cx="15" cy="12" r="6"></circle>
-      </svg>
-      Common Ground
+      <img src="./logo.png" alt="Common Ground 2026">
     </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#speakers">Speakers</a>
-      <a href="#experiences">Tracks</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#venue">Venue</a>
-      <a href="#partners">Partners</a>
-      <a href="#faq">FAQ</a>
-      <a href="#registration" class="nav-mobile-apply">Apply to Attend</a>
-    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="register.html" class="nav-mobile-apply">Register</a></li>
+    </ul>
+
     <div class="nav-reg">
-      <button class="btn btn-primary"
-        onclick="document.getElementById('registration').scrollIntoView({behavior:'smooth'})">Apply</button>
+      <a href="register.html" class="btn btn-primary">Register</a>
     </div>
+
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-controls="navLinks"
       aria-expanded="false">
       <span></span>
@@ -75,7 +69,7 @@
           <span class="presented-label">Presented by</span>
           <a class="presented-logo" href="https://vestedfinance.com/in/" target="_blank" rel="noopener noreferrer"
             aria-label="Visit Vested Finance">
-            <img src="./vsted finance  logo.png" alt="Vested Finance">
+            <img src="./Vested-finance-transparent.png" alt="Vested Finance">
           </a>
         </div>
 
@@ -88,8 +82,8 @@
 
         <div class="hero-actions">
           <button class="btn hero-btn-primary"
-            onclick="document.getElementById('registration').scrollIntoView({behavior:'smooth'})">
-            Apply to Attend
+            onclick="document.getElementById('speakers').scrollIntoView({behavior:'smooth'})">
+            View Speakers
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -97,9 +91,8 @@
             </svg>
           </button>
           <button class="btn hero-btn-ghost"
-            onclick="document.getElementById('speakers').scrollIntoView({behavior:'smooth'})">View Speakers</button>
+            onclick="document.getElementById('schedule').scrollIntoView({behavior:'smooth'})">View Schedule</button>
         </div>
-        <p class="hero-application-note">Limited capacity. Entry is granted only after a confirmation email.</p>
       </div>
     </div>
 
@@ -131,7 +124,7 @@
         <p class="about-closing">Learn. Connect. Build. Together.</p>
         <div class="about-actions">
           <a href="#speakers" class="btn btn-dark">Explore Speakers</a>
-          <a href="#registration" class="btn btn-ghost">Apply to Attend</a>
+
         </div>
       </div>
     </div>
@@ -144,35 +137,19 @@
       <h2 class="h1 reveal">Featured Speakers</h2>
       <div class="speaker-grid stagger">
 
-        <div class="sp-card reveal">
-          <div class="sp-photo">
-            <img src="./tezan.webp" alt="Tezan Sahu" loading="lazy" decoding="async">
-          </div>
-          <div class="sp-body">
-            <h3 class="h3">Tezan Sahu</h3>
-            <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path
-                  d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z" />
-              </svg>
-              <span>Applied Scientist, Microsoft</span>
-            </div>
-            <p class="sp-sub">AI Engineer · National Bestselling Author</p>
-            <a href="https://in.linkedin.com/in/tezan-sahu" target="_blank" rel="noopener noreferrer"
-              class="speaker-link">LinkedIn <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
 
         <div class="sp-card reveal">
           <div class="sp-photo">
-            <img src="./ravi.webp" alt="Ravi Tej" loading="lazy" decoding="async">
+            <img src="./ravi.jpeg" alt="Ravi Tej" loading="lazy" decoding="async">
           </div>
           <div class="sp-body">
             <h3 class="h3">Ravi Tej</h3>
             <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path
-                  d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z" />
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path fill="#f35325" d="M11.4 11.4H0V0h11.4v11.4z" />
+                <path fill="#81bc06" d="M24 11.4H12.6V0H24v11.4z" />
+                <path fill="#05a6f0" d="M11.4 24H0V12.6h11.4V24z" />
+                <path fill="#ffba08" d="M24 24H12.6V12.6H24V24z" />
               </svg>
               <span>Product Designer, Microsoft AI & Windows</span>
             </div>
@@ -184,14 +161,16 @@
 
         <div class="sp-card reveal">
           <div class="sp-photo">
-            <img src="./sandeep.webp" alt="Sandeep Chadda" loading="lazy" decoding="async">
+            <img src="./sandeep.jpeg" alt="Sandeep Chadda" loading="lazy" decoding="async">
           </div>
           <div class="sp-body">
             <h3 class="h3">Sandeep Chadda</h3>
             <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path
-                  d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z" />
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path fill="#f35325" d="M11.4 11.4H0V0h11.4v11.4z" />
+                <path fill="#81bc06" d="M24 11.4H12.6V0H24v11.4z" />
+                <path fill="#05a6f0" d="M11.4 24H0V12.6h11.4V24z" />
+                <path fill="#ffba08" d="M24 24H12.6V12.6H24V24z" />
               </svg>
               <span>Principal Product Manager, Microsoft</span>
             </div>
@@ -208,9 +187,7 @@
           <div class="sp-body">
             <h3 class="h3">Samveg Thaker</h3>
             <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path d="M12 2L2 22h5l5-10 5 10h5L12 2z" />
-              </svg>
+              <img src="./vested-icon.png" alt="Vested Finance" width="14" height="14" style="border-radius: 2px;">
               <span>Product Manager, Vested Finance</span>
             </div>
             <p class="sp-sub">Former Software Engineer, Microsoft · Entrepreneur</p>
@@ -231,9 +208,11 @@
           <div class="sp-body">
             <h3 class="h3">Vipul Chakravarthy</h3>
             <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path
-                  d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zm12.6 0H12.6V0H24v11.4z" />
+              <svg viewBox="0 0 24 24" width="13" height="13">
+                <path fill="#f35325" d="M11.4 11.4H0V0h11.4v11.4z" />
+                <path fill="#81bc06" d="M24 11.4H12.6V0H24v11.4z" />
+                <path fill="#05a6f0" d="M11.4 24H0V12.6h11.4V24z" />
+                <path fill="#ffba08" d="M24 24H12.6V12.6H24V24z" />
               </svg>
               <span>Engineer, Microsoft</span>
             </div>
@@ -245,13 +224,14 @@
 
         <div class="sp-card reveal">
           <div class="sp-photo">
-            <img src="./abhiram.webp" alt="Guna Abhiram Bondada" loading="lazy" decoding="async">
+            <img src="./Abhiram.png" alt="Guna Abhiram Bondada" loading="lazy" decoding="async">
           </div>
           <div class="sp-body">
             <h3 class="h3">Guna Abhiram Bondada</h3>
             <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18A8 8 0 1112 4a8 8 0 010 16z" />
+              <svg viewBox="0 0 24 24" fill="#f36c21" width="13" height="13">
+                <path d="M10 2v4H6v3h4v8.5c0 1.5.5 2.5 2.5 2.5H15v-3h-2c-.5 0-.5-.5-.5-1V9h3V6h-3V2h-3z" />
+                <circle cx="19" cy="17" r="3" />
               </svg>
               <span>Engineering & AI, Teradata</span>
             </div>
@@ -261,23 +241,6 @@
           </div>
         </div>
 
-        <div class="sp-card reveal">
-          <div class="sp-photo">
-            <img src="./saipriya.webp" alt="Saipriyadarshini Bandi" loading="lazy" decoding="async">
-          </div>
-          <div class="sp-body">
-            <h3 class="h3">Saipriyadarshini Bandi</h3>
-            <div class="sp-company">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
-                <path d="M2 12h20v2H2zM2 6h20v2H2zM2 18h20v2H2z" />
-              </svg>
-              <span>Senior Associate, JP Morgan Chase & Co.</span>
-            </div>
-            <p class="sp-sub">Engineering & Finance</p>
-            <a href="https://in.linkedin.com/in/saipriyadarshini" target="_blank" rel="noopener noreferrer"
-              class="speaker-link">LinkedIn <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -528,48 +491,56 @@
       <p class="mono-label reveal" style="text-align:center;">[ Partners ]</p>
       <h2 class="h1 reveal" style="text-align:center;">Partners & Sponsors</h2>
 
-      <div class="partner-list">
+      <div class="partner-list-primary">
         <div class="partner-tier reveal">
-          <p class="tier-label">Title Sponsor</p>
+          <p class="tier-label" style="font-weight: 600; font-size: 0.7rem;">Title Sponsor</p>
           <div class="tier-logo">
             <a class="partner-logo-box" href="https://vestedfinance.com/in/" target="_blank" rel="noopener noreferrer"
-              aria-label="Visit Vested Finance">
-              <img src="./vsted finance  logo.png" alt="Vested Finance" loading="lazy">
+              aria-label="Visit Vested Finance" title="Visit Vested Finance">
+              <img src="./Vested-finance-transparent.png" alt="Vested Finance" loading="lazy" style="height: 38px;">
             </a>
           </div>
         </div>
+      </div>
 
+      <div class="partner-list-secondary">
         <div class="partner-tier reveal">
           <p class="tier-label">Venue Partner</p>
           <div class="tier-logo">
             <a class="partner-logo-box" href="https://www.microsoft.com/en-in/msidc/hyderabad-campus" target="_blank"
-              rel="noopener noreferrer" aria-label="Visit Microsoft India Development Center">
+              rel="noopener noreferrer" aria-label="Visit Microsoft India Development Center" title="Visit Microsoft">
               <img src="./microsoftlogo.png" alt="Microsoft" loading="lazy">
             </a>
           </div>
         </div>
 
         <div class="partner-tier reveal">
-          <p class="tier-label">Community Partner</p>
-          <div class="comm-card">
-            <h3 class="h3">Creativee Community</h3>
-            <p style="font-size:0.8125rem; color:var(--muted); margin-top:0.125rem;">Hyderabad, India</p>
-            <p style="font-size:0.875rem; color:var(--text-2); line-height:1.6; margin-top:0.75rem;">
-              Unite diverse creatives in an inclusive community, fostering collaboration, co-creation, and continuous
-              learning.
-            </p>
-            <div class="comm-tags">
-              <span class="sp-tag">Design</span>
-              <span class="sp-tag">Creative</span>
-              <span class="sp-tag">Community</span>
-            </div>
-            <a href="https://in.linkedin.com/company/creativeecommunity" target="_blank" rel="noopener noreferrer"
-              class="btn btn-ghost" style="padding:0.5rem 1rem;">LinkedIn <svg width="14" height="14"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg></a>
+          <p class="tier-label">Community Partners</p>
+          <div class="tier-logo" style="display: flex; gap: 2.5rem; flex-wrap: wrap; justify-content: center;">
+            <a class="partner-logo-box" href="#" aria-label="Visit Creativee Community" title="Visit Creativee Community">
+              <img src="./Creativee Community.png" alt="Creativee Community" loading="lazy">
+            </a>
+            <a class="partner-logo-box" href="#" aria-label="Visit Kramer's Community" title="Visit Kramer's Community">
+              <img src="./karmer logo.jpeg" alt="Kramer's Community" loading="lazy">
+            </a>
+          </div>
+        </div>
+
+        <div class="partner-tier reveal">
+          <p class="tier-label">Platform Partner</p>
+          <div class="tier-logo">
+            <a class="partner-logo-box" href="#" aria-label="Visit GoAvo" title="Visit GoAvo">
+              <img src="./GoAvologo.svg" alt="GoAvo" loading="lazy">
+            </a>
+          </div>
+        </div>
+
+        <div class="partner-tier reveal">
+          <p class="tier-label">Media Partner</p>
+          <div class="tier-logo">
+            <a class="partner-logo-box" href="#" aria-label="Visit 24mm" title="Visit 24mm Media">
+              <img src="./24mm.jpeg" alt="24mm Media" loading="lazy" style="mix-blend-mode: multiply;">
+            </a>
           </div>
         </div>
       </div>
@@ -580,11 +551,11 @@
   <section class="section" id="venue">
     <div class="container reveal">
       <div class="venue-block">
-        <p class="mono-label" style="color:rgba(255,255,255,0.35);">[ Location ]</p>
-        <h2 class="h1" style="color:#fff; margin-bottom:0.5rem;">Venue Experience</h2>
-        <h3 class="h3" style="color:rgba(255,255,255,0.7); font-weight:400; margin-bottom:1.25rem;">Microsoft Office,
+        <p class="mono-label" style="color:var(--muted);">[ Location ]</p>
+        <h2 class="h1" style="color:var(--primary); margin-bottom:0.5rem;">Venue Experience</h2>
+        <h3 class="h3" style="color:var(--text-2); font-weight:400; margin-bottom:1.25rem;">Microsoft Office,
           Hyderabad · 18 July 2026</h3>
-        <p class="body-lg" style="color:rgba(255,255,255,0.6); max-width:520px;">
+        <p class="body-lg" style="color:var(--text-2); max-width:520px;">
           Experience a day of learning, networking, and meaningful conversations at one of India's premier technology
           campuses.
         </p>
@@ -617,170 +588,7 @@
     </div>
   </section>
 
-  <!-- REGISTRATION -->
-  <section class="section" id="registration">
-    <div class="container">
-      <div class="reg-wrap reveal">
-        <p class="mono-label" style="text-align:center;">[ Register ]</p>
-        <h2 class="h1" style="text-align:center; margin-bottom:1rem;">Apply to Attend</h2>
-        <p class="registration-intro">Submitting this form does not confirm your seat. Applications are reviewed, and
-          only guests who receive a separate confirmation email will be admitted to the conference.</p>
-        <div class="reg-card">
-          <div class="progress" id="progress">
-            <div class="progress-pip on"></div>
-            <div class="progress-pip"></div>
-            <div class="progress-pip"></div>
-            <div class="progress-pip"></div>
-            <div class="progress-pip"></div>
-          </div>
 
-          <form id="regForm">
-            <div class="form-step active" id="step1">
-              <h3 class="h3">Personal Details</h3>
-              <p class="step-hint">Tell us who you are.</p>
-              <input type="text" id="regName" name="name" placeholder="Full Name" required>
-              <input type="email" id="regEmail" name="email" placeholder="Email Address" required>
-              <input type="tel" id="regPhone" name="phone" placeholder="Mobile Number" required>
-              <div class="form-actions">
-                <button type="button" class="btn btn-dark next-btn">Continue →</button>
-              </div>
-            </div>
-
-            <div class="form-step" id="step2">
-              <h3 class="h3">Professional Details</h3>
-              <p class="step-hint">What do you do?</p>
-              <select id="regType" name="type" required>
-                <option value="" disabled selected>Student or Professional?</option>
-                <option value="student">Student</option>
-                <option value="professional">Professional</option>
-              </select>
-              <input type="text" id="regOrg" name="organization" placeholder="College / Company" required>
-              <input type="text" id="regRole" name="role" placeholder="Degree / Role" required>
-              <div class="form-actions">
-                <button type="button" class="btn btn-ghost prev-btn"><svg width="14" height="14" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg> Back</button>
-                <button type="button" class="btn btn-dark next-btn">Continue <svg width="14" height="14"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg></button>
-              </div>
-            </div>
-
-            <div class="form-step" id="step3">
-              <h3 class="h3">Your Profiles</h3>
-              <p class="step-hint">Help us know your work.</p>
-              <input type="url" id="regLinkedin" name="linkedin" placeholder="LinkedIn URL" required>
-              <input type="url" id="regGithub" name="github" placeholder="GitHub URL (optional)">
-              <input type="url" id="regPortfolio" name="portfolio" placeholder="Portfolio URL (optional)">
-              <div class="form-actions">
-                <button type="button" class="btn btn-ghost prev-btn"><svg width="14" height="14" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg> Back</button>
-                <button type="button" class="btn btn-dark next-btn">Continue <svg width="14" height="14"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg></button>
-              </div>
-            </div>
-
-            <div class="form-step" id="step4">
-              <h3 class="h3">Your Interests</h3>
-              <p class="step-hint">What excites you the most?</p>
-              <div class="check-grid">
-                <label><input type="checkbox" name="interests" value="Artificial Intelligence"> Artificial
-                  Intelligence</label>
-                <label><input type="checkbox" name="interests" value="Product"> Product</label>
-                <label><input type="checkbox" name="interests" value="Design"> Design</label>
-                <label><input type="checkbox" name="interests" value="Engineering"> Engineering</label>
-                <label><input type="checkbox" name="interests" value="Financial Technology"> Financial
-                  Technology</label>
-                <label><input type="checkbox" name="interests" value="Career Development"> Career Development</label>
-              </div>
-              <div class="form-actions">
-                <button type="button" class="btn btn-ghost prev-btn"><svg width="14" height="14" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg> Back</button>
-                <button type="button" class="btn btn-dark next-btn">Continue <svg width="14" height="14"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg></button>
-              </div>
-            </div>
-
-            <div class="form-step" id="step5">
-              <h3 class="h3">Submit Your Application</h3>
-              <p class="step-hint">Review the attendance policy and consent.</p>
-              <p class="application-policy">I understand that submitting this application does not reserve a seat. Entry
-                is permitted only after I receive a confirmation email from the Common Ground team.</p>
-              <div class="consent">
-                <label><input type="checkbox" required> I agree to the Code of Conduct</label>
-                <label><input type="checkbox" required> I consent to event photography</label>
-                <label><input type="checkbox" required> I accept the Privacy Policy</label>
-              </div>
-              <div class="form-actions">
-                <button type="button" class="btn btn-ghost prev-btn"><svg width="14" height="14" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                  </svg> Back</button>
-                <button type="submit" class="btn btn-dark">Submit Application <svg width="14" height="14"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg></button>
-              </div>
-            </div>
-          </form>
-          <div class="form-step" id="errorScreen" style="text-align:center;">
-            <div class="success-badge"
-              style="background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-            </div>
-            <h3 class="h2" id="errorTitle">Application Failed</h3>
-            <p style="font-size:0.875rem; color:var(--text-2); margin-top:0.5rem;" id="errorMsg">We are currently
-              experiencing technical difficulties.</p>
-            <div style="margin-top: 2rem;">
-              <button type="button" class="btn btn-ghost" id="errorBackBtn">Try Again</button>
-            </div>
-          </div>
-
-          <div class="form-step" id="successScreen" style="text-align:center;">
-            <div class="success-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <h3 class="h2">Application Received</h3>
-            <p style="font-size:0.875rem; color:var(--text-2); margin-top:0.5rem;">Thank you for applying to Common
-              Ground 2026. This submission does not confirm your seat.</p>
-            <div class="reg-id" id="regId">CG26-XXXXX</div>
-            <p style="font-size:0.75rem; color:var(--muted);">Your application will be reviewed. Only applicants who
-              receive a separate confirmation email and entry instructions will be admitted.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ -->
   <section class="section" id="faq" style="background: var(--surface);">
@@ -843,10 +651,9 @@
           <h2 class="display">Common<br>Ground</h2>
           <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: 0.75rem;">
             <span class="footer-tagline"
-              style="color: rgba(255,255,255,0.6); font-weight: 500; margin-top: 0; font-size: 1rem;">Presented by</span>
-            <div
-              style="background: #fff; padding: 0.4rem 0.75rem; border-radius: 4px; display: inline-flex; align-items: center;">
-              <img src="./vsted finance  logo.png" alt="Vested Finance" style="height: 28px; object-fit: contain;">
+              style="color: var(--muted); font-weight: 500; margin-top: 0; font-size: 1rem;">Presented by</span>
+            <div style="display: inline-flex; align-items: center;">
+              <img src="./Vested-finance-transparent.png" alt="Vested Finance" style="height: 36px; object-fit: contain;">
             </div>
           </div>
           <p class="footer-tagline" style="margin-top: 0.5rem;">Technology. Intelligence. Impact.</p>
@@ -873,7 +680,7 @@
           <a href="#speakers">Speakers</a>
           <a href="#schedule">Schedule</a>
           <a href="#partners">Partners</a>
-          <a href="#registration">Apply</a>
+
         </div>
       </div>
       <div class="footer-bottom">
@@ -881,7 +688,7 @@
           <span class="footer-copy">© 2026 Common Ground Presented by Vested. All rights reserved.</span>
           <span class="footer-copy" style="opacity: 0.7;">Website built and developed by <a
               href="https://linkedin.com/in/santhosh-japala" target="_blank" rel="noopener noreferrer"
-              style="color: var(--text); text-decoration: underline; text-underline-offset: 4px;">Santhosh
+              style="color: var(--accent); text-decoration: underline; text-underline-offset: 4px;">Santhosh
               Japala</a></span>
         </div>
         <div class="footer-social">
