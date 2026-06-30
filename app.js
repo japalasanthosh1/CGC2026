@@ -120,7 +120,7 @@
 
   if (expItems.length > 0 && expPreviewImage) {
     expItems.forEach(item => {
-      item.addEventListener('mouseenter', () => {
+      const activateExp = () => {
         if (item.classList.contains('active')) return;
 
         // Remove active class from all
@@ -137,7 +137,10 @@
             expPreviewImage.classList.remove('fade-out');
           }, 400); // Matches CSS transition duration
         }
-      });
+      };
+
+      item.addEventListener('mouseenter', activateExp);
+      item.addEventListener('click', activateExp);
     });
   }
 
