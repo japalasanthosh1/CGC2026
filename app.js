@@ -50,7 +50,7 @@
   }, { passive: true });
 
   /* ─── Event countdown with Flip Animation ─── */
-  const countdownTarget = new Date('2026-07-18T09:00:00+05:30').getTime();
+  const countdownTarget = new Date('2026-07-26T09:00:00+05:30').getTime();
   const countdownFields = {
     days: document.getElementById('countdownDays'),
     hours: document.getElementById('countdownHours'),
